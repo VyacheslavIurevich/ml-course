@@ -21,3 +21,7 @@
 *.egg-info/
 data/svhn/**
 
+.venv/
+__pycache__/
+*.pyc
+

@@ -5,6 +5,8 @@ description = "ML Course homeworks"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+  "albumentations>=2.0.8",
+  "gdown>=6.1.0",
   "ipykernel>=7.1.0",
   "ipython>=9.9.0",
   "ipywidgets>=8.1.8",
@@ -18,6 +20,11 @@ dependencies = [
   "seaborn>=0.13.2",
   "torch>=2.12.0",
   "scipy>=1.16.3",
+  "opencv-python-headless>=4.13.0.92",
+  "pillow>=12.2.0",
+  "segmentation-models-pytorch>=0.5.0",
+  "torchvision>=0.27.0",
+  "tqdm>=4.68.2",
 ]
 
 [build-system]
@@ -35,6 +42,12 @@ target-version = ['py311']
 line-length = 88
 target-version = "py311"
 extend-include = ["*.ipynb"]
+exclude = [
+  ".venv",
+  ".git",
+  "__pycache__",
+  "*.pyc",
+]
 
 [tool.ruff.lint]
 select = [
@@ -56,6 +69,7 @@ warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
 ignore_missing_imports = true
+exclude = [".venv/"]
 
 [dependency-groups]
 dev = [
